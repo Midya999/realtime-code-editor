@@ -6,8 +6,8 @@ import { useEffect } from "react";
 const socket = io({
   transports: ["websocket"],
 });
-socket.on("connect", () => {
-  console.log("connected to server", socket.id);
+const socket = io(window.location.origin, {
+  transports: ["websocket"],
 });
 
 const App = () => {
