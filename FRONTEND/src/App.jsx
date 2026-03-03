@@ -6,9 +6,7 @@ import { useEffect } from "react";
 const socket = io({
   transports: ["websocket"],
 });
-const socket = io(window.location.origin, {
-  transports: ["websocket"],
-});
+const socket = io(window.location.origin);
 
 const App = () => {
 
