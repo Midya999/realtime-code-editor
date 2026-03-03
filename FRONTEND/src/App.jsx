@@ -3,9 +3,7 @@ import io from "socket.io-client";
 import { useState } from "react";
 import Editor from "@monaco-editor/react";
 import { useEffect } from "react";
-const socket = io({
-  transports: ["websocket"],
-});
+
 const socket = io(window.location.origin);
 
 const App = () => {
