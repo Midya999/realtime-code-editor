@@ -3,7 +3,9 @@ import io from "socket.io-client";
 import { useState } from "react";
 import Editor from "@monaco-editor/react";
 import { useEffect } from "react";
-const socket = io("https://realtime-code-editor-sxu5.onrender.com");
+const socket = io({
+  transports: ["websocket"],
+});
 socket.on("connect", () => {
   console.log("connected to server", socket.id);
 });
